@@ -10,6 +10,10 @@
         </select>
 
         {{ implode(', ', $greeting) }} {{ $name }} @if ($loud) ! @endif
+
+        <form action="#" wire:submit.prevent="$set('name', ' ')">
+            <button>Reset Name</button>
+        </form>
     {{-- DATA BINDING END--}}
 
 
