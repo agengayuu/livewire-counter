@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 class Counter extends Component
 {
 
     public $name = ' ';
+    public $namee = ' ';
     public $loud = false;
     public $greeting = ['Hello'];
 
@@ -25,5 +26,15 @@ class Counter extends Component
     public function decrement()
     {
         $this->count--;
+    }
+
+    public function mount($namee)
+    {
+        $this->namee = $namee;
+    }
+
+    public function updatedMount($namee)
+    {
+        $this->namee = strtoupper($namee);
     }
 }

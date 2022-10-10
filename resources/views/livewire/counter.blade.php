@@ -16,6 +16,13 @@
         </form>
     {{-- DATA BINDING END--}}
 
+    {{-- WITH LIFECYCLE HOOKS --}}
+        <br />
+        <input wire:model="namee" type="text">
+
+        Helloo {{ $namee }}
+    {{-- WITH LIFECYCLE HOOKS END --}}
+
 
     {{-- COUNTER --}}
         <h1>{{ $count }}</h1>

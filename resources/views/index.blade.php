@@ -14,7 +14,7 @@
     @livewireStyles
 </head>
 <body>
-    <livewire:counter />
+    @livewire('counter', ['namee' => ' '])
     <h3>Livewire 2 Example</h3>
     @livewireScripts
 </body>
