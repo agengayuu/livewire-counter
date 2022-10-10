@@ -1,5 +1,21 @@
 <div>
-    <h1>{{ $count }}</h1>
-    <button wire:click="increment">+</button>
-    <button wire:click="decrement">-</button>
+
+    {{-- DATA BINDING --}}
+        <input wire:model="name" type="text">
+        <input wire:model="loud" type="checkbox">
+        <select wire:model="greeting" multiple>
+            <option>Hello</option>
+            <option>GoodBye</option>
+            <option>See ya</option>
+        </select>
+
+        {{ implode(', ', $greeting) }} {{ $name }} @if ($loud) ! @endif
+    {{-- DATA BINDING END--}}
+
+
+    {{-- COUNTER --}}
+        <h1>{{ $count }}</h1>
+        <button wire:click="increment">+</button>
+        <button wire:click="decrement">-</button>
+    {{-- COUNTER END --}}
 </div>

@@ -6,6 +6,11 @@ use Livewire\Component;
 
 class Counter extends Component
 {
+
+    public $name = ' ';
+    public $loud = false;
+    public $greeting = ['Hello'];
+
     public $count = 0;
     public function render()
     {
